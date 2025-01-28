@@ -7,6 +7,13 @@ class EmptyProject:
     self.author = author
     self.lang = lang
 
+  def create_project_dir(self, directory):
+    if os.path.exists(directory):
+      return False
+    else:
+      os.makedirs(directory)
+      return True
+
   def create(self):
     print()
     print(f"Project name: {self.project_name}")
@@ -16,16 +23,14 @@ class EmptyProject:
     print("==========")
     print()
 
-    if self.lang == "python":
-      # Create project directory in current directory
-      project_dir = f"{os.getcwd()}/{self.project_name}"
-      print(f"Project directory: {project_dir}")
+    # Create project directory in current directory
+    project_dir = f"{os.getcwd()}/{self.project_name}"
+    print(f"Project directory: {project_dir}")
 
-      if os.path.exists(project_dir):
-        print("Project directory is exists!")
-      else:
-        os.makedirs(project_dir)
-        print("Directory created")
+    if self.create_project_dir(project_dir):
+      print("Directory created")
+    else:
+      print("Project directory already exists!")
 
 
 def main():
