@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 
 class EmptyProject:
@@ -31,6 +32,16 @@ class EmptyProject:
       print("Directory created")
     else:
       print("Project directory already exists!")
+
+    # Open project dir
+    os.chdir(project_dir)
+
+    # Create local git repo
+    if os.path.exists(f"{project_dir}/.git/"):
+      print("Git repo is exists!")
+    else:
+      subprocess.run(["git", "init"])
+      print("Local git repo created!")
 
 
 def main():
