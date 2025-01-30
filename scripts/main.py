@@ -80,6 +80,11 @@ if __name__ == "__main__":
 
     print(".gitignore created")
 
+    print()
+    print("==========")
+    print()
+    print("Project created!")
+
 
 def main():
   project_name = input("Enter project name: ")
