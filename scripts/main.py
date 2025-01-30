@@ -8,7 +8,7 @@ class EmptyProject:
     self.author = author
     self.lang = lang
 
-  def create_project_dir(self, directory):
+  def create_dir(self, directory):
     if os.path.exists(directory):
       return False
     else:
@@ -28,7 +28,7 @@ class EmptyProject:
     project_dir = f"{os.getcwd()}/{self.project_name}"
     print(f"Project directory: {project_dir}")
 
-    if self.create_project_dir(project_dir):
+    if self.create_dir(project_dir):
       print("Directory created")
     else:
       print("Project directory already exists!")
@@ -65,6 +65,20 @@ class EmptyProject:
       subprocess.run(["python3", "-m", "venv", "venv"])
 
       print("Python venv created")
+
+      # Create main.py file
+      self.create_dir("scripts")
+
+      main_script = """def main():
+\tprint("huy")
+
+if __name__ == "__main__":
+\tmain()"""
+
+      with open("scripts/main.py", 'w', encoding="utf-8") as main_file:
+        main_file.write(main_script)
+
+      print("File main.py created!")
 
     gitignore_file.close()
 
