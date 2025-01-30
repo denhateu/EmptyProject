@@ -43,23 +43,26 @@ class EmptyProject:
       subprocess.run(["git", "init"])
       print("Local git repo created!")
 
+    # Create README.md file
+    with open("README.md", 'w', encoding="utf-8") as readme_file:
+      readme_file.write(f"# {self.project_name}\n")
+
+    print("README.md created")
+
+    # Create .gitignore file
+    gitignore_file = open(".gitignore", 'w', encoding="utf-8")
+
     if self.lang == "python":
-      # Create README.md file
-      with open("README.md", 'w', encoding="utf-8") as readme_file:
-        readme_file.write(f"# {self.project_name}\n")
-
-      print("README.md created")
-
-      # Create .gitignore file
-      with open(".gitignore", 'w', encoding="utf-8") as gitignore_file:
-        gitignore_file.write("venv/\n")
-
-      print(".gitignore created")
+      gitignore_file.write("venv/\n")
 
       # Create python venv
       subprocess.run(["python3", "-m", "venv", "venv"])
 
       print("Python venv created")
+
+    gitignore_file.close()
+
+    print(".gitignore created")
 
 
 def main():
