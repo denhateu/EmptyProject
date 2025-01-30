@@ -43,11 +43,7 @@ class EmptyProject:
     os.chdir(project_dir)
 
     # Create local git repo
-    if os.path.exists(f"{project_dir}/.git/"):
-      print("Git repo is exists!")
-    else:
-      subprocess.run(["git", "init"])
-      print("Local git repo created!")
+    subprocess.run(["git", "init"])
 
     # Create README.md file
     with open("README.md", 'w', encoding="utf-8") as readme_file:
@@ -70,10 +66,10 @@ class EmptyProject:
       self.create_dir("scripts")
 
       main_script = """def main():
-\tprint("huy")
+  print("huy")
 
 if __name__ == "__main__":
-\tmain()"""
+  main()"""
 
       with open("scripts/main.py", 'w', encoding="utf-8") as main_file:
         main_file.write(main_script)
