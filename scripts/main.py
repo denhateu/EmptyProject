@@ -33,6 +33,12 @@ class EmptyProject:
     else:
       print("Project directory already exists!")
 
+      recreate = input("Recreate project? [y/N]: ")
+      if recreate == "y" or recreate == "Y":
+        print("Recreating project...")
+      else:
+        return False
+
     # Open project dir
     os.chdir(project_dir)
 
