@@ -35,12 +35,14 @@ class EmptyProject:
     """
 
     print()
+    print("=====Project info=====")
     print(f"Project name: {self.project_name}")
     print(f"Project author: {self.author}")
     print(f"Project language: {self.lang}")
-    print()
     print("==========")
+
     print()
+    print("=====Logs=====")
 
     # Create project directory in current directory
     project_dir = f"{os.getcwd()}/{self.project_name}"
@@ -55,7 +57,10 @@ class EmptyProject:
       if recreate == "y" or recreate == "Y":
         print("Recreating project...")
       else:
+        print("Cancel")
         return False
+
+    print()
 
     # Open project dir
     os.chdir(project_dir)
@@ -98,7 +103,7 @@ if __name__ == "__main__":
 
     print(".gitignore created")
 
-    print()
     print("==========")
     print()
     print("Project created!")
+    print()
