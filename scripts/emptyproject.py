@@ -1,5 +1,6 @@
 import os
 import subprocess
+from datetime import datetime
 
 from functions import show_message
 
@@ -90,7 +91,18 @@ class EmptyProject:
       # Create main.py file
       self.create_dir("scripts")
 
-      main_script = """def main():
+      current_date = datetime.today().strftime("%Y-%m-%d")
+
+      main_script = f"""\"\"\"
+{self.project_name}
+
+Author: {self.author}
+Version: 0.0.0-alpha
+Creation date: {current_date}
+\"\"\"
+
+
+def main():
   print("huy")
 
 if __name__ == "__main__":
@@ -104,6 +116,8 @@ if __name__ == "__main__":
     gitignore_file.close()
 
     print(".gitignore created")
+
+    print("==========")
 
     show_message("Project created!")
 
