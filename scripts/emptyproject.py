@@ -3,19 +3,37 @@ import subprocess
 
 
 class EmptyProject:
-  def __init__(self, project_name, author, lang):
+  """
+  Using this class you can create project directory for specific
+  programming language
+  """
+
+  def __init__(self, project_name, author, lang) -> None:
     self.project_name = project_name
     self.author = author
     self.lang = lang
 
-  def create_dir(self, directory):
+  def create_dir(self, directory: str = "") -> bool:
+    """
+    Creates directory if not exists
+
+    args:
+      directory:
+        Name of directory
+    """
+
     if os.path.exists(directory):
       return False
     else:
       os.makedirs(directory)
       return True
 
-  def create(self):
+  def create(self) -> None:
+    """
+    Creates all that need for project, for example, directory,
+    environment, scripts and etc.
+    """
+
     print()
     print(f"Project name: {self.project_name}")
     print(f"Project author: {self.author}")
