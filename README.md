@@ -7,3 +7,9 @@
 ### Linux
 
 Мне лень писать как установить вручную поэтому просто скачайте репозиторий и запустите скрипт `run.sh`
+
+## The End.
+
+Если ты не смог запустить проект то ты ![парацетамол](https://github.com/denhateu/EmptyProject/paracetamol.png?raw=true)
+
+![Целую](https://github.com/denhateu/EmptyProject/celuyu.jpg?raw=true)
