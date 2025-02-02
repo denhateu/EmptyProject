@@ -1,3 +1,10 @@
+"""
+EmptyProject
+
+Author: Danil Aksenow (@denhateu)
+Version: 0.0.0-alpha
+"""
+
 from emptyproject import EmptyProject
 
 
