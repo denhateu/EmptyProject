@@ -8,19 +8,7 @@ Version: 0.0.0-alpha
 import sys
 
 from emptyproject import EmptyProject
-from functions import show_message
-
-
-def get_lang(language):
-  try:
-    if language == "python" or int(language) == 0:
-      result = "python"
-    else:
-      return False
-  except ValueError:
-    return False
-
-  return result
+from functions import show_message, get_lang
 
 
 def main():
