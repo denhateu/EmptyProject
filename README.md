@@ -10,6 +10,6 @@
 
 ## The End.
 
-Если ты не смог запустить проект то ты ![парацетамол](https://github.com/denhateu/EmptyProject/paracetamol.png?raw=true)
+Если ты не смог запустить проект то ты ![парацетамол](https://github.com/denhateu/EmptyProject/assets/img/paracetamol.png?raw=true)
 
-![Целую](https://github.com/denhateu/EmptyProject/celuyu.jpg?raw=true)
+![Целую](https://github.com/denhateu/EmptyProject/assets/img/celuyu.jpg?raw=true)
