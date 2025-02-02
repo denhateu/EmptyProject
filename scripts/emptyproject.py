@@ -1,6 +1,8 @@
 import os
 import subprocess
 
+from functions import show_message
+
 
 class EmptyProject:
   """
@@ -97,13 +99,12 @@ if __name__ == "__main__":
       with open("scripts/main.py", 'w', encoding="utf-8") as main_file:
         main_file.write(main_script)
 
-      print("File main.py created!")
+      print("File main.py created")
 
     gitignore_file.close()
 
     print(".gitignore created")
 
-    print("==========")
-    print()
-    print("Project created!")
+    show_message("Project created!")
+
     print()

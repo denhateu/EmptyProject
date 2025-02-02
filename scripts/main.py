@@ -6,6 +6,7 @@ Version: 0.0.0-alpha
 """
 
 from emptyproject import EmptyProject
+from functions import show_message
 
 
 def main():
@@ -26,11 +27,11 @@ def main():
         language = "python"
       else:
         # Language not found
-        print("Language not found!")
+        show_message("Language not found!")
         continue
     except ValueError:
       # Error
-      print("Please select number!")
+      show_message("Please select number!")
       continue
 
     break
